@@ -192,20 +192,20 @@ def starting_program():
                 break
 
     while True:
-        filter_time = input(
+        time = input(
             "\nWould you like to filter the data by month(m), day(d), both(b), or not at all? Type 'none'(n) for no time filter.\n"
         )
-        if filter_time in time_patterns:
+        if time in times:
             break
         else:
-            for key, pattern in time_patterns.items():
-                if re.search(pattern, filter_time, re.IGNORECASE):
-                    filter_time = key
+            for key, pattern in times.items():
+                if re.search(pattern, time, re.IGNORECASE):
+                    time = key
                     break
-            if filter_time in time_patterns:
+            if time in times:
                 break
 
-    if filter_time == "month" or filter_time == "both":
+    if time == "month" or time == "both":
         while True:
             month = input(
                 "\nWhich month? January, February, March, April, May, or June?\n"
@@ -222,7 +222,7 @@ def starting_program():
     else:
         month = None
 
-    if filter_time == "day" or filter_time == "both":
+    if time == "day" or time == "both":
         while True:
             day = input(
                 "\nWhich day? Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?\n"
@@ -277,7 +277,7 @@ citys_data = {
     "washington": ["washington.csv", r"^w(ashington)?$"],
 }
 
-time_patterns = {
+times = {
     "month": r"^m(onth)?$",
     "day": r"^d(ay)?$",
     "both": r"b(oth)?$",
