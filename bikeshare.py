@@ -176,6 +176,9 @@ def main():
 
 
 def starting_program():
+    """
+    The starting_program function starts the program with some initials questions to select the desire filters
+    """
     print("\nHello! Let's explore some US bikeshare data!")
 
     while True:
@@ -244,6 +247,9 @@ def starting_program():
 
 
 def print_calculation(question, answer, time):
+    """
+    The print_calculation function is used to print the output from each calculation in the same way
+    """
     print("Calculating statistic...\n")
     print(question)
     print(answer)
@@ -251,6 +257,9 @@ def print_calculation(question, answer, time):
 
 
 def print_raw_data(df):
+    """
+    The print_raw_data function is used to print raw data from the csv file
+    """
     i = 0
     while True:
         answer = input(
@@ -264,6 +273,9 @@ def print_raw_data(df):
 
 
 def restart_program():
+    """
+    The restart_program function is used to ask the user if he want to restart the program
+    """
     while True:
         answer = input("\nWould you like to restart? Type 'yes' or 'no'.\n")
         if re.search(r"^y(es)?$", answer, re.IGNORECASE):
