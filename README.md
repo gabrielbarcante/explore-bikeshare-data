@@ -39,6 +39,10 @@ We used the three city dataset files for gaining insights into the data:
 * new_york_city.csv
 * washington.csv
 <br><br>
+### Software
+* Language: Python 3.8 or above
+* Packages: Pandas (1.1.0), re, sys, timeit
+<br><br>
 ### Credits
 I would like to thank the Python course from Udacity.
 <br>
